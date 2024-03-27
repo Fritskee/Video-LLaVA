@@ -129,6 +129,20 @@ pip install -e ".[train]"
 pip install flash-attn --no-build-isolation
 pip install decord opencv-python git+https://github.com/facebookresearch/pytorchvideo.git@28fe037d212663c6a24f373b94cc5d478c8c1a1d
 ```
+## For Devices with Apple Silicon chips: 
+```bash
+git clone https://github.com/PKU-YuanGroup/Video-LLaVA
+cd Video-LLaVA
+conda create -n videollava python=3.10 -y
+conda activate videollava
+pip install --upgrade pip  # enable PEP 660 support
+pip install -e .
+pip install -e ".[train]"
+pip install flash-attn --no-build-isolation
+pip install opencv-python
+pip install eva-decord 
+pip install git+https://github.com/facebookresearch/pytorchvideo.git@28fe037d212663c6a24f373b94cc5d478c8c1a1d
+```
 
 ## 🤖 API
 **We open source all codes.** If you want to load the model (e.g. ```LanguageBind/Video-LLaVA-7B```) on local, you can use the following code snippets.
